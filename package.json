@@ -1,0 +1,29 @@
+{
+  "name": "patrimonio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/costafsk/patrimonio.git",
+  "author": "Diego Costa <diego.machado.d.costa@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon app/app",
+    "sass": "node-sass --output-style compressed app/views/styles/scss/master.scss -wo public/css "
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.1",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.3.1",
+    "consign": "^0.1.6",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-minify-html": "^0.12.0",
+    "express-validator": "^5.3.1",
+    "jquery": "^3.3.1",
+    "mysql": "^2.16.0",
+    "popper.js": "^1.14.7"
+  },
+  "devDependencies": {
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.10"
+  }
+}
