@@ -14,9 +14,23 @@
             <h4 class="mt-5 mb-5 text-white">CPD</h4>
         </header>
         <main class="col-12 col-md-6 col-sm-12 main-login">
-            <form action="#" method="POST" class="d-flex flex-column align-items-center">
-                <input type="text" class="form-control mb-3 w-75 pt-4 pb-4" name="username" placeholder="Usuário" required>
-                <input type="password" class="form-control mb-4 w-75 pt-4 pb-4" name="password" placeholder="Senha" required>
+            <form action="/dashboard" method="POST" class="d-flex flex-column align-items-center">
+                <input type="text" class="form-control mb-3 w-75 pt-4 pb-4" name="username" placeholder="Usuário">
+                <input type="password" class="form-control mb-4 w-75 pt-4 pb-4" name="password" placeholder="Senha">
+                <% if(errors.length > 0) { %>
+                    <div class="row w-75">
+                        <div class="col-md-12 col-12">
+                            <div class="alert alert-warning">
+                                <strong>Atenção</strong>
+                                <ul>
+                                    <% for(let i=0; i<errors.length; i++) { %>
+                                        <li><%= errors[i].msg %></li>
+                                    <% } %>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
                 <input type="submit" value="Login" class="btn btn-login pt-2 pb-2 w-75 font-weight-bold">
             </form>
         </main>
@@ -24,5 +38,7 @@
             <p class="text-white mt-3 mr-5">CPD - Todos Direitos Reservados &copy; 2019</p>
         </footer>
     </div>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="js/main.js" type="module"></script>
 </body>
 </html>

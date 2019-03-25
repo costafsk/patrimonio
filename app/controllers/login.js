@@ -1,3 +1,3 @@
 module.exports.render = (res) => {
-    res.render('login');
+    res.render('login', {errors: {}});
 }

@@ -19,8 +19,12 @@
     "express-minify-html": "^0.12.0",
     "express-validator": "^5.3.1",
     "jquery": "^3.3.1",
-    "mysql": "^2.16.0",
-    "popper.js": "^1.14.7"
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.2.1",
+    "popper.js": "^1.14.7",
+    "socket.io": "^2.2.0",
+    "sqlite": "^3.0.3",
+    "sqlite-sync": "^0.3.8"
   },
   "devDependencies": {
     "node-sass": "^4.11.0",
