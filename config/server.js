@@ -3,6 +3,8 @@ const consign = require('consign');
 const expressValidator = require('express-validator');
 const bodyParser = require('body-parser');
 const minifyHTML = require('express-minify-html');
+const helmet = require('helmet');
+const expressSession = require('express-session');
 
 const app = express();
 
@@ -23,6 +25,14 @@ app.use(minifyHTML({
         removeEmptyAttributes: true,
         minifyJS: true
     }
+}));
+
+app.use(helmet());
+
+app.use(expressSession({
+    secret: 'd1702e8656ee7fd312e51f53c25fa2e76a175006',
+    resave: false,
+    saveUninitialized: false
 }));
 
 app.use(bodyParser.json());

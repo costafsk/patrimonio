@@ -6,27 +6,27 @@
   "author": "Diego Costa <diego.machado.d.costa@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon app/app",
-    "sass": "node-sass --output-style compressed app/views/styles/scss/master.scss -wo public/css "
+    "dev": "nodemon app/app"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.8.1",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.3.1",
     "consign": "^0.1.6",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "express-minify-html": "^0.12.0",
+    "express-session": "^1.15.6",
     "express-validator": "^5.3.1",
+    "helmet": "^3.16.0",
     "jquery": "^3.3.1",
-    "jsonwebtoken": "^8.5.1",
     "md5": "^2.2.1",
     "popper.js": "^1.14.7",
-    "socket.io": "^2.2.0",
     "sqlite": "^3.0.3",
     "sqlite-sync": "^0.3.8"
   },
   "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2",
     "node-sass": "^4.11.0",
     "nodemon": "^1.18.10"
   }

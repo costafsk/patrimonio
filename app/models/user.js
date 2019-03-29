@@ -6,33 +6,24 @@ class User {
         this._hash = database.hash;
     }
 
-    auth(data) {
+    auth(request) {
         const md5 = require('md5');
-        const  {username, password} = data; 
+
+        const  {username, password} = request.body;
+        
+        const query = `select * from users where username='${username}'`;
+        
         try {
-            let user = this._connection.run(`select * from users 
-            where username='${username}'`);
+            let user = this._connection.run(query);
+
             if (user[0].password === (md5(password) + this._hash)) {
                 user[0].password = null;
-
-                
-
+                request.session.authorized = true;
+                return true;
             }
         } catch {
             return false;
         }
-    }
-    createToken() {
-        // Json Web Token
-        const jwt = require('jsonwebtoken');
-        const auth = require('../../config/auth/auth.json');
-        const token = jwt.sign({
-            id: user[0].id
-        }, auth.secret, {
-            expiresIn: 86400,
-        });
-
-        return token;
     }
 }
 
