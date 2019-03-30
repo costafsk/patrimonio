@@ -5,22 +5,33 @@
 // Layout
 
 .login-container {
-    background-color: rgb(94, 145, 248);
+    background-color: rgb(248, 94, 107);
 }
 
-.main-login {
+main {
     background-color: white;
     border-radius: 12px;
-    padding: 3% 0%;
     -webkit-box-shadow: -2px 2px 31px 0px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: -2px 2px 31px 0px rgba(0, 0, 0, 0.2);
     box-shadow: -2px 2px 31px 0px rgba(0, 0, 0, 0.527);
 }
 
+input {
+    outline-color: rgb(248, 94, 107);
+}
+
+// Icons
+
+.user-icon {
+    border-radius: 160px;
+    width: 160px;
+    // border: 1px solid rgb(248, 94, 107);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.137);
+}
 // Buttons
 
 .btn-login {
-    background-color: rgb(94, 145, 248);
+    background-color: rgb(248, 94, 107);
     color: white;
     box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.356);
     text-shadow: 1px 1px rgba(0, 0, 0, 0.137);
@@ -28,15 +39,17 @@
 
 .btn-login:hover {
     color: white;
-    background-color: rgba(94, 145, 248, 0.829);
+    border: 1px solid rgb(248, 94, 107);
+    background-color: rgba(248, 94, 107, 0.781);
 }
 
 // Text
 
 .title {
     font-weight: bold;
-    text-shadow: 2px 2px rgba(0,0,0,0.3);
-    font-size: 3em;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.123);
+    font-size: 1.6em;
+    color: rgb(248, 94, 107);
     @media(max-width: 746px) {
         font-size: 2.8em;
     }

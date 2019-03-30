@@ -6,7 +6,8 @@
   "author": "Diego Costa <diego.machado.d.costa@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon app/app"
+    "dev": "nodemon app/app",
+    "gulp":"gulp"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
