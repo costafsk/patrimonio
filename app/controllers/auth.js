@@ -13,7 +13,7 @@ module.exports.return = (req, res) => {
 }
 
 // POST 
-module.exports.auth = (application, req, res) => {
+module.exports.auth = async (application, req, res) => {
 
     req.assert('username', 'Usuário é obrigatório!').notEmpty();
     req.assert('password', 'Senha é obrigatório').notEmpty();
@@ -21,8 +21,12 @@ module.exports.auth = (application, req, res) => {
     const errors = req.validationErrors();
 
     if (errors) {
-        res.render('home/home', {errors: errors});
-        return;
+        res.render('home/home', 
+        {
+            errors: errors,
+            username:req.body.username,
+            password: req.body.password
+        }); return;
     }
 
     // Validation
@@ -30,7 +34,14 @@ module.exports.auth = (application, req, res) => {
     const connection = application.config.database;
     const user = new application.app.models.user(connection);
 
-    if(user.auth(req)) {
+    if(await user.auth(req)) {
+        req.session.authorized = true;
         res.redirect('/dashboard');
+    } else {
+        res.render('home/home', {
+            errors: [{msg: 'Usuário e/ou senha Invalidos'}],
+            username: req.body.username,
+            password: req.body.password
+        });
     }
 }

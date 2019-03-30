@@ -16,9 +16,9 @@
             </div>
         </header>
         <main class="col-12 col-md-6 col-sm-12 main-login">
-            <form action="/dashboard" method="POST" class="d-flex flex-column align-items-center">
-                <input type="text" class="form-control mb-3 w-75 pt-4 pb-4" name="username" placeholder="Usuário">
-                <input type="password" class="form-control mb-4 w-75 pt-4 pb-4" name="password" placeholder="Senha">
+            <form action="/auth" method="POST" class="d-flex flex-column align-items-center">
+                <input type="text" value="<%= username %>" class="form-control mb-3 w-75 pt-4 pb-4" name="username" placeholder="Usuário">
+                <input type="password" class="form-control mb-4 w-75 pt-4 pb-4" value="<%= password %>" name="password" placeholder="Senha">
                 <% if(errors.length > 0) { %>
                     <div class="row w-75">
                         <div class="col-md-12 col-12">
