@@ -7,9 +7,11 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon app/app",
-    "gulp":"gulp"
+    "gulp": "gulp",
+    "build": "parcel build frontend/libraries/main.js --out-dir frontend/public/js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.1",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.3.1",
     "consign": "^0.1.6",
@@ -21,6 +23,7 @@
     "helmet": "^3.16.0",
     "jquery": "^3.3.1",
     "md5": "^2.2.1",
+    "parcel-bundler": "^1.12.3",
     "popper.js": "^1.14.7",
     "sqlite": "^3.0.3",
     "sqlite-sync": "^0.3.8"

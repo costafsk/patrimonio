@@ -12,7 +12,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', 'app/views');
 
-app.use(express.static('public'));
+app.use(express.static('frontend/public'));
 
 app.use(minifyHTML({
     override: true,
