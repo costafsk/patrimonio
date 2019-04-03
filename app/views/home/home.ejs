@@ -10,7 +10,7 @@
 <body class="login-container">
     <div class="container-fluid d-flex p-0 flex-column align-items-center">
         <header class="w-100 d-flex p-0 mb-5">
-            <nav class="bg-dark navbar w-100 flex-row justify-content-between align-items-center">
+            <nav class="navbar w-100 flex-row justify-content-between align-items-center">
                 <div>
                     <h3 class="mt-2 text-light font-weight-bold">
                         CPD
@@ -21,17 +21,17 @@
                 </div>
             </nav>
         </header>
-        <main class="col-12 col-md-6 col-sm-12 pt-5 pb-5">
+        <main class="col-11 col-md-5 col-sm-8 pt-5 pb-5">
             <form action="/auth" method="POST" class="d-flex flex-column align-items-center">
-                <img src="img/user-icon.svg" alt="icon" class="user-icon mb-4">
-                <p class="title">Acesso</p>
+                <img src="img/user-icon.png" alt="icon" class="user-icon mb-4">
+                <p class="title">Administrador</p>
                 <input type="text" value="<%= username %>" class="form-control mb-3 w-75 pt-4 pb-4" name="username" placeholder="Usuário">
                 <input type="password" class="form-control mb-4 w-75 pt-4 pb-4" value="<%= password %>"
                     name="password" placeholder="Senha">
                 <% if(errors.length > 0) { %>
                     <div class="row w-75">
                         <div class="col-md-12 col-12">
-                            <div class="alert alert-warning">
+                            <div class="alert alert-info">
                                 <strong>Atenção</strong>
                                 <ul>
                                     <% for(let i=0; i<errors.length; i++) { %>
@@ -45,9 +45,6 @@
                 <input type="submit" value="Login" class="btn btn-login pt-2 pb-2 w-75 font-weight-bold">
             </form>
         </main>
-        <footer class="footer fixed-bottom bg-dark d-flex flex-row justify-content-end">
-            <p class="text-white mt-3 mr-5">CPD - Todos Direitos Reservados &copy; 2019</p>
-        </footer>
     </div>
     <script src="js/main.js" type="module"></script>
 </body>
