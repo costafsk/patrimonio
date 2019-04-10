@@ -8,7 +8,7 @@ sass.compiler = require('node-sass');
 gulp.task('sass', () => {
     return gulp.src('./app/views/**/*.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(gulp.dest('./frontend/public/css'));
+        .pipe(gulp.dest('./assets/public/css'));
 });
 
 gulp.task('default', () => {

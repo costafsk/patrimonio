@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/settings.ico" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/dashboard/dashboard.style.css">
     <title>Painel de Controle</title>
@@ -12,7 +13,7 @@
         <div class="nav-hidden"></div>
         <nav class="navbar">
             <div class="d-flex align-items-center">   
-                <i class="fas fa-bars text-white mr-3"></i>
+                <i class="fas fa-bars text-white mr-3" id="hamburguer"></i>
                 <h5 class="pt-2 text-white">Painel de Controle</h5>
             </div>
             <div class="d-flex flex-row justify-items-center">
@@ -26,63 +27,70 @@
                 <ul class="list-group">
                     <li class="list-group-item">
                         <div class="d-flex flex-column align-items-center">
-                            <i class="fas fa-home sidebar-icon"></i>
-                            <button class="btn-nav w-100" type="button" data-toggle="collapse" data-target="#location"
-                                aria-expanded="false" aria-controls="location">Início</button>
-                        </div>
-                        <div class="collapse" id="location">
-                            aa
+                            <a class="btn-nav w-100 d-flex flex-column align-items-center dashLink" href="/dashboard">
+                                <i class="fas fa-home sidebar-icon"></i>
+                                <span>Início</span>
+                            </a>
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="d-flex flex-column align-items-center">
-                            <i class="fas fa-balance-scale sidebar-icon"></i>
-                            <button class="btn-nav w-100" type="button" data-toggle="collapse" data-target="#location"
-                        aria-expanded="false" aria-controls="location">Setores</button>
-                        </div>
-                        <div class="collapse w-100" id="location">
-                            Setores
-                            Gabinetes
+                            <a class="btn-nav w-100 d-flex flex-column align-items-center" href="/dashboard/sectors">
+                                <i class="fas fa-balance-scale sidebar-icon"></i>
+                                <span>Setores</span>
+                            </a>
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="d-flex flex-column align-items-center">
-                            <i class="fas fa-door-closed sidebar-icon"></i>
-                            <button class="btn-nav w-100" type="button" data-toggle="collapse" data-target="#location"
-                                aria-expanded="false" aria-controls="location">Gabinetes</button>
-                        </div>
-                        <div class="collapse" id="location">
-                            aa
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="d-flex flex-column align-items-center">
-                            <i class="fas fa-archive sidebar-icon"></i>
-                            <button class="btn-nav w-100" type="button" data-toggle="collapse" data-target="#location"
-                                aria-expanded="false" aria-controls="location">Repositório</button>
-                        </div>
-                        <div class="collapse" id="location">
-                            aa
+                            <a class="btn-nav w-100 d-flex flex-column align-items-center"
+                            href="/dashboard/cabinets">
+                                <i class="fas fa-door-closed sidebar-icon"></i>
+                                <span>Gabinetes</span>
+                            </a>
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="d-flex flex-column align-items-center">
-                            <i class="fas fa-book sidebar-icon"></i>
-                            <button class="btn-nav w-100" type="button" data-toggle="collapse" data-target="#location"
-                                aria-expanded="false" aria-controls="location">Atendimentos</button>
+                            <button class="btn-nav w-100 d-flex flex-column align-items-center" type="button" data-toggle="collapse" data-target="#stock"
+                            aria-expanded="false" aria-controls="stock">
+                                <i class="fas fa-archive sidebar-icon"></i>
+                                <span>Estoque</span>
+                            </button>
                         </div>
-                        <div class="collapse" id="location">
-                            aa
+                        <div class="collapse" id="stock">
+                            <a href="/dashboard/">Computadores</a>
+                            <a href="">Monitores</a>
+                            <a href="">Impressoras</a>
+                            <a href="">Periféricos</a>
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="d-flex flex-column align-items-center">
-                            <i class="fas fa-sitemap sidebar-icon"></i>
-                            <button class="btn-nav w-100" type="button" data-toggle="collapse" data-target="#location"
-                                aria-expanded="false" aria-controls="location">Itens</button>
+                            <button class="btn-nav w-100 d-flex flex-column align-items-center" type="button" data-toggle="collapse" data-target="#calls"
+                            aria-expanded="false" aria-controls="calls">
+                                <i class="fas fa-book sidebar-icon"></i>
+                                <span>Atendimentos</span>
+                            </button>
+                        </div>
+                        <div class="collapse" id="calls">
+                            <a href="/dashboard/calls/sectors">Setores</a>
+                            <a href="/dashboard/calls/cabinets">Gabinetes</a>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex flex-column align-items-center">
+                            <button class="btn-nav w-100 flex-column d-flex align-items-center" type="button" data-toggle="collapse" data-target="#location"
+                            aria-expanded="false" aria-controls="location">
+                                <i class="fas fa-sitemap sidebar-icon"></i>
+                                <span>Itens</span>
+                            </button>
                         </div>
                         <div class="collapse" id="location">
-                            aa
+                            <a href="/dashboard/">Computadores</a>
+                            <a href="">Monitores</a>
+                            <a href="">Impressoras</a>
+                            <a href="">Periféricos</a>
                         </div>
                     </li>
                 </ul>

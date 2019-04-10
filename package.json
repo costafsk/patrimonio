@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "nodemon app/app",
     "gulp": "gulp",
-    "build": "parcel build frontend/libraries/main.js --out-dir frontend/public/js"
+    "server:assets": "parcel serve assets/libraries/main.js --out-dir assets/public/js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.8.1",
