@@ -14,10 +14,11 @@
         <nav class="navbar">
             <div class="d-flex align-items-center">   
                 <i class="fas fa-bars text-white mr-3" id="hamburguer"></i>
-                <h5 class="pt-2 text-white">Painel de Controle</h5>
+                <h5 class="pt-2 text-white">Início</h5>
             </div>
-            <div class="d-flex flex-row justify-items-center">
-                <i class="fas fa-sign-out-alt text-white"></i>
+            <div class="d-flex flex-row justify-items-center align-items-center">
+                <h5 class="pt-2 text-white mr-3 name">Diego Costa</h5>
+                <img src="img/user-icon.png"  class="icon-user mr-3" alt="icon-user">
             </div>
         </nav>
     </header>
@@ -35,7 +36,7 @@
                     </li>
                     <li class="list-group-item">
                         <div class="d-flex flex-column align-items-center">
-                            <a class="btn-nav w-100 d-flex flex-column align-items-center" href="/dashboard/sectors">
+                            <a class="btn-nav w-100 d-flex flex-column align-items-center" href="/sectors">
                                 <i class="fas fa-balance-scale sidebar-icon"></i>
                                 <span>Setores</span>
                             </a>
@@ -44,7 +45,7 @@
                     <li class="list-group-item">
                         <div class="d-flex flex-column align-items-center">
                             <a class="btn-nav w-100 d-flex flex-column align-items-center"
-                            href="/dashboard/cabinets">
+                            href="/cabinets">
                                 <i class="fas fa-door-closed sidebar-icon"></i>
                                 <span>Gabinetes</span>
                             </a>
@@ -52,32 +53,18 @@
                     </li>
                     <li class="list-group-item">
                         <div class="d-flex flex-column align-items-center">
-                            <button class="btn-nav w-100 d-flex flex-column align-items-center" type="button" data-toggle="collapse" data-target="#stock"
-                            aria-expanded="false" aria-controls="stock">
+                            <a class="btn-nav w-100 d-flex flex-column align-items-center" href="/stock">
                                 <i class="fas fa-archive sidebar-icon"></i>
                                 <span>Estoque</span>
-                            </button>
-                        </div>
-                        <div class="collapse" id="stock">
-                            <a href="/dashboard/">Computadores</a>
-                            <a href="">Monitores</a>
-                            <a href="">Impressoras</a>
-                            <a href="">Periféricos</a>
+                            </a>
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="d-flex flex-column align-items-center">
-                            <button class="btn-nav w-100 flex-column d-flex align-items-center" type="button" data-toggle="collapse" data-target="#location"
-                            aria-expanded="false" aria-controls="location">
+                            <a class="btn-nav w-100 flex-column d-flex align-items-center" href="/itens">
                                 <i class="fas fa-sitemap sidebar-icon"></i>
                                 <span>Itens</span>
-                            </button>
-                        </div>
-                        <div class="collapse" id="location">
-                            <a href="/dashboard/">Computadores</a>
-                            <a href="">Monitores</a>
-                            <a href="">Impressoras</a>
-                            <a href="">Periféricos</a>
+                            </a>
                         </div>
                     </li>
                 </ul>
@@ -85,10 +72,10 @@
         </aside>
         <main class="d-flex">
             <section>
-                <div class="alert alert-info w-100 mr-2 ml-4 mt-4 col-md-12 col-11 alert-box" role="alert">
+                <div class="alert alert-info w-100 mr-2 ml-2 mt-4 col-md-12 col-11 alert-box" role="alert">
                     <div class="d-flex">
                         <h4 class="alert-heading mr-2 font-weight-bold">Atendimento de Maquina Nº</h4>
-                        <h4>34</h4>
+                        <h4 class="font-weight-bold">34</h4>
                     </div>
                     <hr>
                     <section>
@@ -120,7 +107,7 @@
                 <div class="modal fade" id="newAlert" tabindex="-1" role="dialog" aria-labelledby="newAlertLabel"
                     aria-hidden="true">
                     <div class="modal-dialog" role="document">
-                        <div class="modal-content">
+                        <div class="modal-content container-fluid">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="newAlertLabel">Definir novo atendimento</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -156,7 +143,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Atendimentos para Maquinas -->
             </section>
         </main>
     </div>
