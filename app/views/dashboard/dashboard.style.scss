@@ -84,3 +84,22 @@ aside {
         margin-bottom: 5%;
     }
 }
+.alert-box {
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
+}
+.btn-more {
+    font-size: 4em;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 3%;
+    margin-right: 2%;
+    color: rgb(78, 63, 129);
+    text-shadow: 2px 2px rgba(0,0,0,0.3);
+    transition: 0.3s all;
+}
+
+.btn-more:hover {
+    cursor: pointer;
+    color: rgb(38, 31, 59);
+}
