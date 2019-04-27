@@ -11,16 +11,17 @@ class User {
 
         const  {username, password} = request.body;
         
-        const query = `select * from users where username='${username}'`;
+        const query = `select * from user where username='${username}'`;
         
         try {
             let user = await this._connection.run(query);
+            
             if (user[0].password === (md5(password) + this._hash)) {
                 user[0].password = null;
-                return true;
+                return user;
             }
             return false;
-        } catch {
+        } catch(err) {
             return false;
         }
     }

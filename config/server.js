@@ -5,9 +5,10 @@ const bodyParser = require('body-parser');
 const minifyHTML = require('express-minify-html');
 const helmet = require('helmet');
 const expressSession = require('express-session');
+const redirect = require('express-redirect');
 
 const app = express();
-
+redirect(app);
 
 app.set('view engine', 'ejs');
 app.set('views', 'app/views');

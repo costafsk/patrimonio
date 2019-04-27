@@ -32,11 +32,12 @@ module.exports.auth = async (application, req, res) => {
     // Validation
 
     const connection = application.config.database;
-    const user = new application.app.models.user(connection);
-
-    if(await user.auth(req)) {
+    const model = new application.app.models.user(connection);
+    const user = await model.auth(req);
+    if(user) {
+        console.log(user);
         req.session.authorized = true;
-        res.redirect('/dashboard');
+        res.redirect('/dashboard/:abacate');
     } else {
         res.render('home/home', {
             errors: [{msg: 'Usuário e/ou senha Invalidos'}],

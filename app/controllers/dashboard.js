@@ -1,5 +1,7 @@
 module.exports.render = (req, res) => {
-    res.render('dashboard/dashboard');
+    res.render('dashboard/dashboard', {});
+    console.log('PARAMS -------------------');
+    console.log(req.params);
     return;
 }
 
