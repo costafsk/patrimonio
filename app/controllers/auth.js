@@ -35,9 +35,11 @@ module.exports.auth = async (application, req, res) => {
     const model = new application.app.models.user(connection);
     const user = await model.auth(req);
     if(user) {
-        console.log(user);
         req.session.authorized = true;
-        res.redirect('/dashboard/:abacate');
+        res.render('dashboard/dashboard', {
+            username: req.body.username
+        });
+        return;
     } else {
         res.render('home/home', {
             errors: [{msg: 'Usuário e/ou senha Invalidos'}],

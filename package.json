@@ -6,9 +6,9 @@
   "author": "Diego Costa <diego.machado.d.costa@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon app/app",
-    "gulp": "gulp",
-    "server:assets": "parcel serve assets/libraries/main.js --out-dir assets/public/js"
+    "dev:server": "nodemon app/app",
+    "dev:assets": "gulp",
+    "dev:test": "./node_modules/.bin/cypress open"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.8.1",
@@ -24,13 +24,16 @@
     "helmet": "^3.16.0",
     "jquery": "^3.3.1",
     "md5": "^2.2.1",
-    "parcel-bundler": "^1.12.3",
     "popper.js": "^1.14.7",
-    "sqlite": "^3.0.3",
     "sqlite-sync": "^0.3.8"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "cypress": "^3.2.0",
     "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-js-minify": "^0.0.3",
     "gulp-sass": "^4.0.2",
     "node-sass": "^4.11.0",
     "nodemon": "^1.18.10"
