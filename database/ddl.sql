@@ -1,7 +1,7 @@
 -- [DROPS]
 -- drop table user;
 -- drop table attendment;
--- drop table place; 
+-- drop table place;
 
 -- Enabling Foreign keys Use;
 PRAGMA foreign_keys = ON;
@@ -38,7 +38,7 @@ CREATE TABLE "machine"(
     "name" VARCHAR(30) NOT NULL,
     "processor" VARCHAR(40) NOT NULL,
     "os" VARCHAR(30) NOT NULL,
-    "winKey" VARCHAR(50) NOT NULL,
+    "winKey" VARCHAR(50) NOT NULL UNIQUE,
     "officeKey" VARCHAR(50) NOT NULL,
     "ram" VARCHAR(3) NOT NULL,
     "status" VARCHAR(1) NOT NULL,
@@ -49,14 +49,6 @@ CREATE TABLE "machine"(
     CONSTRAINT "machinePlacePK" FOREIGN KEY("place")
         REFERENCES "place"("name")
 );
-
-CREATE TRIGGER winKey_equals BEFORE INSERT ON "machine"
-BEGIN
-    SELECT CASE
-    WHEN EXISTS(SELECT * FROM "machine" WHERE "winkey"=new.winKey)
-    THEN RAISE(ABORT, 'Erro: Esta key esta cadastrada')
-END;
-END;
 
 CREATE TABLE "printer"(
     "patrimony" VARCHAR(6) PRIMARY KEY,
