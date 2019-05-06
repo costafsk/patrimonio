@@ -8,7 +8,7 @@ const minifyJS = require('gulp-js-minify');
 sass.compiler = require('node-sass');
 
 gulp.task('sass', () => {
-    return gulp.src('./app/views/**/*.scss')
+    return gulp.src('./app/views/pages/**/*.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(gulp.dest('./assets/public/css'));
 });

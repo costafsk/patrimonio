@@ -1,0 +1,117 @@
+// Bootstrap
+@import './../../../node_modules/bootstrap/scss/bootstrap.scss';
+// Font Awesome
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
+
+// Layout
+body {
+    overflow-x: hidden;
+}
+.login-container {
+    background-color: rgb(241, 241, 241);
+}
+.layout {
+    justify-content: center;
+    aside {
+        width: 0%;
+    }
+    aside > * > *{
+        @media(max-width: 1005px) {
+            display: none;
+            // visibility: hidden;
+        }
+    }
+}
+nav {
+    background-color: #333333;
+    -webkit-box-shadow: -1px 9px 5px -3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: -1px 9px 5px -3px rgba(0, 0, 0, 0.5);
+    box-shadow: -1px 9px 5px -3px rgba(0, 0, 0, 0.5);
+}
+// .aside {
+//     @media(max-width: 1005px) {
+//         width: 0%;
+//     }
+// }
+.input {
+    background-color: #E6E6E6;
+    border-radius: 25px;
+}
+main {
+    @media(max-width: 1005px) {
+        margin-left: -30px;
+    }
+}
+// Icons
+.eyes {
+    font-size: 1.3em;
+    color: rgb(83, 148, 132);
+    text-shadow: 1px 1px rgba(92, 92, 92, 0.288);
+    cursor: pointer;
+}
+.user-icon {
+    border-radius: 160px;
+    width: 160px;
+    @media(max-width: 672px) {
+        width: 130px;
+    }
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.137);
+}
+
+%shadow {
+    -webkit-box-shadow: -2px 2px 31px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: -2px 2px 31px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: -2px 2px 31px 0px rgba(0, 0, 0, 0.527);
+    // @media(max-width: 1005px) {
+    //     display: none;
+    //     // visibility: hidden;
+    // }
+}
+.workplace {
+        @extend %shadow;
+        border-radius: 400px;
+}
+.computer {
+    @extend %shadow;
+    margin-left: 15%;
+    border-radius: 100px;
+}
+.triangle {
+    margin-right: 20%;
+    margin-top: -40px;
+    transform: rotate(45deg);
+    // @media(max-width: 1005px) {
+    //     display: none;
+        // visibility: hidden;
+    // }
+}
+
+// Buttons
+
+.btn-login {
+    background-color: #76C2AF;
+    color: white;
+    border-radius: 25px;
+    box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.356);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.137);
+}
+
+.btn-login:hover {
+    color: white;
+    border: 1px solid #76C2AF;
+    background-color: rgba(118, 194, 175, 0.753);
+}
+// Text
+
+.title {
+    font-weight: bold;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.123);
+    font-size: 1.6em;
+    color: grey;
+}
+
+#noPass {
+    color: rgb(92, 92, 92);
+}

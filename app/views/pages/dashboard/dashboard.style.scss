@@ -1,51 +1,14 @@
-@import './../../../node_modules/bootstrap/scss/bootstrap.scss';
-@import '../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
-@import '../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
-@import '../../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
+@import './../../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import '../../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
+@import '../../../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
+@import '../../components/header/header.scss';
 
 // layout
 body {
-    background-color: rgb(219, 219, 219);
+    background-color: rgb(238, 238, 238);
 }
-
-// nav
-.user-icon {
-    width: 100px;
-}
-
-.nav-hidden {
-    width: 7%;
-    background-color: rgb(28, 25, 37);
-    @media(max-width: 670px) {
-        width: 16%;
-    }
-    @media(max-width: 400px) {
-        width: 19.5%;
-    }
-}
-.navbar {
-    width: 93%;
-    background-color: #7159C1;
-    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
-    .fa-bars {
-        text-shadow: 1px 1px rgba(0,0,0,0.2);
-    }
-    .fa-bars:hover {
-        cursor: pointer;
-    }
-    .icon-user {
-        width:  30px;
-    }
-    @media(max-width: 670px) {
-        width: 92%;
-        .name {
-            display: none;
-        }
-    }
-}
-
 // content 
-
 aside {
     width: 7%;
     background-color: rgb(28, 25, 37);

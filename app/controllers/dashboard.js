@@ -1,8 +1,48 @@
-// module.exports.render = (req, res) => {
-//     res.render('dashboard/dashboard', {usernarme:{}});
-//     return;
-// }
+// GET
+module.exports.return = (req, res) => {
+    res.render('home/home', {
+        errors: [{msg:'Usuário é obrigatório!'},{msg: 'Senha é obrigatório!'}],
+        username: '',
+        password: ''
+    });
+}
 
-// module.exports.notFound = (req, res) => {
-//     res.redirect('/');
-// }
+// POST 
+module.exports.auth = async (application, req, res) => {
+
+    req.assert('username', 'Usuário é obrigatório!').notEmpty();
+    req.assert('password', 'Senha é obrigatório').notEmpty();
+
+    const errors = req.validationErrors();
+
+    if (errors) {
+        res.render('home/home', 
+        {
+            errors: errors,
+            username:req.body.username,
+            password: req.body.password
+        }); return;
+    }
+
+    // Validation
+
+    const connection = application.config.database;
+    const model = new application.app.models.user(connection);
+    const user = await model.auth(req);
+    if(user) {
+        req.session.authorized = true;
+        application.get('io').emit('user', {
+            username: req.body.username,
+            type: 1
+        });
+        res.render('dashboard/dashboard');
+        // res.render('dashboard/dashboard', {username: req.body.username});
+        return;
+    } else {
+        res.render('home/home', {
+            errors: [{msg: 'Usuário e/ou senha Invalidos'}],
+            username: req.body.username,
+            password: req.body.password
+        });
+    }
+}

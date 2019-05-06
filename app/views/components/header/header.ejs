@@ -1,0 +1,19 @@
+<header class="d-flex">
+    <nav class="navbar bg-light w-100 d-flex">
+        <div class="d-flex align-items-center">   
+            <i class="fas fa-bars mr-3" id="hamburguer"></i>
+            <h5 class="pt-2"><%= where %></h5>
+        </div>
+        <div class="btn-group" role="group">
+            <button id="userMenu" type="button" class="dropdown-toggle btn d-flex align-items-center" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <h5 class="pt-2 mr-3 name"></h5>
+                <img src="img/user.svg"  class="icon-user mr-3" alt="icon-user">
+            </button>
+        </div>
+        <div class="dropdown-menu" aria-labelledby="userMenu">
+            <a class="dropdown-item" href="#">Dropdown link</a>
+            <a class="dropdown-item" href="#">Dropdown link</a>
+        </div>
+    </nav>
+</header>

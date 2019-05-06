@@ -11,7 +11,7 @@ const app = express();
 redirect(app);
 
 app.set('view engine', 'ejs');
-app.set('views', 'app/views');
+app.set('views', 'app/views/pages');
 
 app.use(express.static('assets/public'));
 
