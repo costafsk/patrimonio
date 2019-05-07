@@ -3,17 +3,40 @@
         <div class="d-flex align-items-center">   
             <i class="fas fa-bars mr-3" id="hamburguer"></i>
             <h5 class="pt-2"><%= where %></h5>
+            <ul class="d-flex w-100 nav-ul mr-5">
+                <li>
+                    <a class="btn-nav w-100 d-flex align-items-center" href="/dashboard">
+                        <span>ínicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="btn-nav w-100 d-flex align-items-center" href="/sectors">
+                        <span>Setores</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="btn-nav w-100 d-flex align-items-center" href="/cabinets">
+                        <span>Gabinetes</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="btn-nav w-100 d-flex align-items-center" href="/stock">
+                        <span>Estoque</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="btn-group" role="group">
-            <button id="userMenu" type="button" class="dropdown-toggle btn d-flex align-items-center" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-                <h5 class="pt-2 mr-3 name"></h5>
-                <img src="img/user.svg"  class="icon-user mr-3" alt="icon-user">
-            </button>
-        </div>
-        <div class="dropdown-menu" aria-labelledby="userMenu">
-            <a class="dropdown-item" href="#">Dropdown link</a>
-            <a class="dropdown-item" href="#">Dropdown link</a>
-        </div>
+        <div class="d-flex align-items-center">
+            <div class="btn-group" role="group">
+                <button id="userMenu" type="button" class="dropdown-toggle btn d-flex align-items-center" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <h5 class="pt-2 mr-3 name"></h5>
+                    <img src="img/user.svg"  class="user-icon mr-3" alt="icon-user">
+                </button>
+            </div>
+            <div class="dropdown-menu" aria-labelledby="userMenu">
+                <a class="dropdown-item" href="#">Dropdown link</a>
+                <a class="dropdown-item" href="#">Dropdown link</a>
+            </div>
     </nav>
 </header>

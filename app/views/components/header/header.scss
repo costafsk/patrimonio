@@ -1,26 +1,35 @@
 .user-icon {
-    width: 100px;
+    width: 40px;
 }
-
-.nav-hidden {
-    background-color: rgb(28, 25, 37);
+nav {
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.1); 
 }
-.navbar {
-    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
-    .fa-bars {
-        text-shadow: 1px 1px rgba(0,0,0,0.2);
-        color: rgb(82, 82, 82);
-    }
-    .fa-bars:hover {
-        cursor: pointer;
-    }
-    .icon-user {
-        width:  30px;
-    }
-    @media(max-width: 670px) {
-        width: 92%;
-        .name {
-            display: none;
+.nav-ul {
+    li {
+        list-style: none;
+        a {
+            text-decoration: none;
+            margin: 15px 5px 0px 15px;
+            color: rgb(85, 85, 85);
+            span {
+                font-size: 1.1em;
+                text-shadow: 1px 1px rgba(0,0,0,.1);
+                transition: 0.1s all;
+            }
+            span:hover {
+                color: rgb(28, 196, 154);
+            }
         }
     }
+}
+
+.btn-config {
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-right: 10%;
+    color: rgb(88, 88, 88);
+}
+
+.btn-config:hover {
+    color: rgb(24, 138, 109);
 }
