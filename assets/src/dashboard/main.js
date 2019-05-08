@@ -13,3 +13,4 @@ $(() => {
     username[0] = username[0].toUpperCase();
     $('.name').text(username.join(''));
 });
+
