@@ -33,3 +33,15 @@ nav {
 .btn-config:hover {
     color: rgb(24, 138, 109);
 }
+.menu-user {
+    @media(max-width: 810px) {
+        width: 100%;
+    }
+}
+a#navbarOptions {
+    color: rgb(32, 32, 32);
+}
+
+.nav-item > a {
+    font-size: 1.1em;
+}
