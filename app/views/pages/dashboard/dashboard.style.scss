@@ -33,3 +33,14 @@ body {
 .page-link:hover {
     color: rgb(31, 197, 156);
 }
+
+.fa-plus-circle {
+    font-size: 4em;
+    color: rgb(104, 223, 193);
+    text-shadow: 1px 3px rgba(0,0,0,0.1);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 3%;
+    margin-right: 3%;
+}
