@@ -32,13 +32,33 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="">
-                                
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5>Local:</h5>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="cabRadio" name="placeRadio"
+                                        class="custom-control-input">
+                                    <label class="custom-control-label" for="cabRadio">Gabinete</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="sectorRadio" name="placeRadio"
+                                        class="custom-control-input">
+                                    <label class="custom-control-label" for="sectorRadio">Setor</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="otherPlace" name="placeRadio"
+                                        class="custom-control-input">
+                                    <label class="custom-control-label" for="otherPlace">Outro</label>
+                                </div>
+                            </div>
+                            <form action="/newAttendment" method="POST">
+                                <div class="newAttendment">
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancelar</button>
+                                    <input type="submit" class="btn btn-outline-info" value="Criar">
+                                </div>
                             </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-outline-info">Save changes</button>
                         </div>
                     </div>
                 </div>
@@ -57,6 +77,7 @@
     <script src="/js/jquery.3.4.1.js"></script>
     <script src="js/dashboard/bootstrap.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="js/dashboard/main.js" type="module"></script>
+    <script src="/js/dashboard/effects.js"></script>
+    <script src="js/dashboard/IOListening.js" type="module"></script>
 </body>
 </html>

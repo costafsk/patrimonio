@@ -23,6 +23,7 @@ CREATE TABLE "attendment"(
     "username" VARCHAR(40) NOT NULL,
     "place" VARCHAR(100) NOT NULL,
     "description" VARCHAR(300),
+    "patrimony" VARCHAR(6) DEFAULT NULL,
     "timestamp" DATATIME DEFAULT CURRENT_TIMESTAMP,
     "resolution" VARCHAR(300),
     "status" VARCHAR(1) NOT NULL,
